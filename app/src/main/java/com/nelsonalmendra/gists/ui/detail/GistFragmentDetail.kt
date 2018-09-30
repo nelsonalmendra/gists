@@ -22,7 +22,7 @@ class GistFragmentDetail : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val gist = arguments?.getSerializable(GIST) as Gist
+        val gist = arguments?.getParcelable(GIST) as Gist
         val view: View = inflater.inflate(R.layout.fragment_gist_detail, container, false)
         Picasso.get()
                 .load(gist.owner.avatar_url)

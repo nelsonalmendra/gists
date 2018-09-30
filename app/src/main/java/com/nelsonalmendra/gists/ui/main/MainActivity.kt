@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), GistsListFragment.IGistListFragment {
     override fun onGistClick(gist: Gist) {
         val detailsFragment = GistFragmentDetail.newInstance()
         val arguments = Bundle()
-        arguments.putSerializable(GistFragmentDetail.GIST, gist)
+        arguments.putParcelable(GistFragmentDetail.GIST, gist)
         detailsFragment.arguments = arguments
         supportFragmentManager
                 .beginTransaction()
